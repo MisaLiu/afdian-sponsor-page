@@ -1,0 +1,17 @@
+html, body {
+    scroll-behavior: smooth;
+}
+.-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#afdian_leaflet {
+    width: 640px !important;
+    height: 220px !important;
+}
+@media screen and (max-width:600px) {
+    #afdian_leaflet {
+        width: 100% !important;
+    }
+}
