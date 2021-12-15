@@ -1,5 +1,5 @@
-# afdian-sponsor-page-vercel
-一个独立展示爱发电赞助用户的网页，试图在Vercel上部署。
+# afdian-sponsor-page
+一个独立展示爱发电赞助用户的网页
 
 ## 特点
 ~~...我想不出来233~~
