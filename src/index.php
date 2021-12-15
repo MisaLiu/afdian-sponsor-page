@@ -1,10 +1,13 @@
 <?php
+    $usernamevar = getenv('USERNAME');
+    $useridvar = getenv('USERID');
+    $tokenvar = getenv('TOKEN');
     // ===============你必须填写下面的必填参数才可以继续使用===============
     $_AFDIAN = array(
         'pageTitle' => '给我发电', // 网页标题
-        'userName'  => 'MisaLiu', // 你的用户名，即你的主页地址 @ 后面的那部分，如 https://afdian.net/@MisaLiu，那么 MisaLiu 就是你的用户名
-        'userId'    => 'user_id', // 你的用户 ID，请前往 https://afdian.net/dashboard/dev 获取
-        'token'     => 'token'    // 你的 API Token，请前往 https://afdian.net/dashboard/dev 获取
+        'userName'  => $usernamevar, // 你的用户名，即你的主页地址 @ 后面的那部分，如 https://afdian.net/@MisaLiu，那么 MisaLiu 就是你的用户名
+        'userId'    => $useridvar, // 你的用户 ID，请前往 https://afdian.net/dashboard/dev 获取
+        'token'     => $tokenvar    // 你的 API Token，请前往 https://afdian.net/dashboard/dev 获取
     );
     // ===============你必须填写上面的必填参数才可以继续使用===============
 
