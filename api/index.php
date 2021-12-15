@@ -1,16 +1,16 @@
 <?php
-    $pagetitlevar = getenv('PAGETITLE');
-    $usernamevar = getenv('USERNAME');
-    $useridvar = getenv('USERID');
-    $tokenvar = getenv('TOKEN');
-    // ===============你必须填写下面的必填参数才可以继续使用===============
+    // 从环境变量中获取参数
+    // 以下环境变量必须被设置
+    $pagetitlevar = getenv('PAGETITLE'); // 网页标题
+    $usernamevar = getenv('USERNAME'); // 你的用户名，即你的主页地址 @ 后面的那部分，如 https://afdian.net/@MisaLiu，那么 MisaLiu 就是你的用户名
+    $useridvar = getenv('USERID'); // 你的用户 ID，请前往 https://afdian.net/dashboard/dev 获取
+    $tokenvar = getenv('TOKEN'); // 你的 API Token，请前往 https://afdian.net/dashboard/dev 获取
     $_AFDIAN = array(
-        'pageTitle' => $pagetitlevar, // 网页标题
-        'userName'  => $usernamevar, // 你的用户名，即你的主页地址 @ 后面的那部分，如 https://afdian.net/@MisaLiu，那么 MisaLiu 就是你的用户名
-        'userId'    => $useridvar, // 你的用户 ID，请前往 https://afdian.net/dashboard/dev 获取
-        'token'     => $tokenvar    // 你的 API Token，请前往 https://afdian.net/dashboard/dev 获取
+        'pageTitle' => $pagetitlevar,
+        'userName'  => $usernamevar,
+        'userId'    => $useridvar,
+        'token'     => $tokenvar
     );
-    // ===============你必须填写上面的必填参数才可以继续使用===============
 
     $currentPage = !empty($_POST['page']) ? $_POST['page'] : 1;
 
@@ -20,7 +20,7 @@
     $data['ts']      = time();
     $data['sign']    = SignAfdian($_AFDIAN['token'], $data['params'], $_AFDIAN['userId']);
 
-    $result = HttpGet('https://afdian.net', '/api/open/query-sponsor', '', http_build_query($data));
+    $result = HttpGet('https://afdian.net', '/api/open/query-sponsor', http_build_query($data), '');
     $result = json_decode($result, true);
 
     $donator['total']     = $result['data']['total_count'];
@@ -142,7 +142,7 @@ HTML;
         return md5($sign, false);
     }
 
-    function HttpGet ($url, $dir, $method = 'GET', $data, $contentType = '', $timeout = 10) {
+    function HttpGet ($url, $dir,  $data, $method = 'GET', $contentType = '', $timeout = 10) {
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_TIMEOUT, $timeout);
         if ($method == 'POST') {
@@ -163,4 +163,3 @@ HTML;
         curl_close($ch);
         return $output;
     }
-?>
