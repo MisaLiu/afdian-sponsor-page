@@ -20,7 +20,7 @@
     $data['ts']      = time();
     $data['sign']    = SignAfdian($_AFDIAN['token'], $data['params'], $_AFDIAN['userId']);
 
-    $result = HttpGet('https://afdian.net', '/api/open/query-sponsor', http_build_query($data), '');
+    $result = HttpGet('https://afdian.net/api/open/query-sponsor?' . http_build_query($data));
     $result = json_decode($result, true);
 
     $donator['total']     = $result['data']['total_count'];
@@ -142,15 +142,15 @@ HTML;
         return md5($sign, false);
     }
 
-    function HttpGet ($url, $dir,  $data, $method = 'GET', $contentType = '', $timeout = 10) {
+    function HttpGet ($url, $method = 'GET', $data = '', $contentType = '', $timeout = 10) {
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_TIMEOUT, $timeout);
         if ($method == 'POST') {
-            curl_setopt($ch, CURLOPT_URL, $url . $dir);
+            curl_setopt($ch, CURLOPT_URL, $url);
             curl_setopt($ch, CURLOPT_POST, 1);
             curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
         } else {
-            curl_setopt($ch, CURLOPT_URL, $url . $dir . '?' . $data);
+            curl_setopt($ch, CURLOPT_URL, $url);
         }
         if (!empty($contentType)) {
             curl_setopt($ch, CURLOPT_HTTPHEADER, $contentType);
