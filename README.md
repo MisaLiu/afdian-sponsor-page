@@ -22,7 +22,13 @@
 
 1. 在Vercel上部署此仓库
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Flwd-temp%2Fafdian-sponsor-page-vercel%2Ftree%2Fmain&env=USERID,TOKEN,PAGETITLE,USERNAME)
+采用此Fork版本库：
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Flwd-temp%2Fafdian-sponsor-page-vercel%2Ftree%2Fvercel&env=USERID,TOKEN,PAGETITLE,USERNAME)
+
+或者采用上游仓库的对应分支：
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FMisaLiu%2Fafdian-sponsor-page%2Ftree%2Fvercel&env=USERID,TOKEN,PAGETITLE,USERNAME)
 
 2. 获取你的爱发电 UserId 和 API Token [点此一键直达](https://afdian.net/dashboard/dev)
 
