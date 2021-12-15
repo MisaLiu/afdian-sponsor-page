@@ -1,7 +1,7 @@
 # afdian-sponsor-page
 一个独立展示爱发电赞助用户的网页
 
-本仓库另有由 @lwd-temp 提供的 [Versel Serverless 分支](https://github.com/MisaLiu/afdian-sponsor-page/tree/versel) 可供使用！
+本仓库另有由 @lwd-temp 提供的 [Vercel Serverless 分支](https://github.com/MisaLiu/afdian-sponsor-page/tree/vercel) 可供使用！
 
 ## 特点
 ~~...我想不出来233~~
