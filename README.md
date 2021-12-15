@@ -1,6 +1,9 @@
 # afdian-sponsor-page
 一个独立展示爱发电赞助用户的网页
 
+## 注意！
+本分支仅用于临时提交 commit 以便一次性 pr 到 main 分支。
+
 本仓库另有由 @lwd-temp 提供的 [Vercel Serverless 分支](https://github.com/MisaLiu/afdian-sponsor-page/tree/vercel) 可供使用！
 
 ## 特点
