@@ -1,19 +1,30 @@
 # afdian-sponsor-page-vercel
-一个独立展示爱发电赞助用户的网页，试图在Vercel上部署。
+
+一个独立展示爱发电赞助用户的网页，但在Vercel上部署。
 
 ## 特点
+
 ~~...我想不出来233~~
 
+基于Vercel部署Serverless服务，无需服务器
+
 ## 使用效果
-访问 https://donate.misaliu.top 来查看
+
+访问 https://afdian-sponsor-page-vercel.vercel.app/ 来查看
 
 ## 使用方法
-1. Clone 本仓库源码
+
+1. 在Vercel上部署此仓库
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Flwd-temp%2Fafdian-sponsor-page-vercel%2Ftree%2Fmain&env=USERID,TOKEN,PAGETITLE,USERNAME)
+
 2. 获取你的爱发电 UserId 和 API Token [点此一键直达](https://afdian.net/dashboard/dev)
-3. 在Vercel上部署此仓库
-4. 将这些信息填入环境变量 $USERID $TOKEN
-5. 填写其他信息 $PAGETITLE $USERNAME
-6. 访问一下试试吧！
+
+3. 将这些信息填入环境变量 USERID（UserId） TOKEN（API Token）
+
+4. 填写其他信息 PAGETITLE（网页标题） USERNAME（你的用户名，即你的主页地址 @ 后面的那部分）
+
+5. 访问一下试试吧！
 
 ## 鸣谢
 * [juicyfx/vercel-php](https://github.com/juicyfx/vercel-php)
