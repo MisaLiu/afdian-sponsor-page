@@ -1,4 +1,5 @@
-console.log('↓ 官方好皮！ヽ（≧□≦）ノ 给我也赞助下呗 → https://afdian.net/@MisaLiu');
+console.log('↓ 官方好皮！ヽ（≧□≦）ノ 给上游开发者也赞助下呗 → https://afdian.net/@MisaLiu');
+console.log('↓ 官方好皮！ヽ（≧□≦）ノ 给Vercel部署适配者也赞助下呗 → https://afdian.net/@lwd-temp');
 
 function switchPage (pageId) {
     mdui.$.ajax({
