@@ -4,15 +4,9 @@
 
 ## 特点
 
-~~...我想不出来233~~明明有很多可写的嘛...
+~~...我想不出来233~~
 
-采用Material Design设计
-
-基于PHP的动态页面
-
-轻量级页面实现快速加载
-
-基于Vercel部署Serverless服务，无需服务器费用支出
+基于Vercel部署Serverless服务，无需服务器
 
 ## 使用效果
 
@@ -28,7 +22,7 @@
 
 3. 将这些信息填入环境变量 USERID（UserId） TOKEN（API Token）
 
-4. 填写其他环境变量 PAGETITLE（网页标题） USERNAME（你的用户名，即你的主页地址 @ 后面的那部分）
+4. 填写其他信息 PAGETITLE（网页标题） USERNAME（你的用户名，即你的主页地址 @ 后面的那部分）
 
 5. 访问一下试试吧！
 
